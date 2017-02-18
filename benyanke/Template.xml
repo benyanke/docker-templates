@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>Scribus</Name>
+  <Description>Welcome to Scribus, a page layout program for Linux, FreeBSD, PC-BSD, NetBSD, OpenBSD, Solaris, OpenIndiana, Debian GNU/Hurd, Mac OS X, OS/2 Warp 4, eComStation, Haiku and Windows. &#13;
+[br][br][b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#13;
+[b]/nobody/.scribus[/b] : Folder where Scribus configuration is stored[br]&#13;
+[b]8080[/b] : xRDP web-interface.[br]
+[b]3389[/b] : xRDP client interface</Description>
+  <Registry>https://hub.docker.com/r/johnodon/scribus/</Registry>
+  <Repository>johnodon/scribus</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+	  <Port>
+        <HostPort>3389</HostPort>
+        <ContainerPort>3389</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/Scribus</HostDir>
+      <ContainerDir>/nobody/.scribus</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Version></Version>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <Banner>http://i.imgur.com/1Wqajla.png</Banner>
+  <Icon>http://i.imgur.com/2g3v7pf.png</Icon>
+  <ExtraParams></ExtraParams>
+  <Overview>Welcome to Scribus, a page layout program for Linux, FreeBSD, PC-BSD, NetBSD, OpenBSD, Solaris, OpenIndiana, Debian GNU/Hurd, Mac OS X, OS/2 Warp 4, eComStation, Haiku and Windows.</Overview>
+  <Beta>False</Beta>
+  <Category>Productivity:</Category>
+  <Date>2016-02-11</Date> 
+  <Support>http://lime-technology.com/forum/index.php?topic=46490.0</Support>
+</Container>
